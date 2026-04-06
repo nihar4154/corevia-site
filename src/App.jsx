@@ -217,8 +217,15 @@ export default function App() {
 
       <header className="sticky top-0 z-40 border-b border-slate-200/70 bg-white/90 backdrop-blur dark:border-slate-800 dark:bg-slate-950/90">
         <div className="mx-auto flex h-16 max-w-7xl items-center justify-between px-6 lg:px-8">
-          <a href="#" className="text-lg font-semibold tracking-tight">
-            Corevia<span className="text-indigo-500"> Systems</span>
+          <a href="#" className="inline-flex items-center gap-3" aria-label="Corevia Systems home">
+            <img
+              src="/corevia-logo.svg"
+              alt="Corevia Systems logo"
+              className="h-9 w-auto md:h-10"
+              loading="eager"
+              decoding="async"
+            />
+            <span className="sr-only">Corevia Systems</span>
           </a>
 
           <nav aria-label="Primary" className="hidden items-center gap-6 md:flex">
@@ -472,7 +479,10 @@ export default function App() {
 
       <footer className="border-t border-slate-200 bg-white dark:border-slate-800 dark:bg-slate-950">
         <div className="mx-auto flex max-w-7xl flex-col gap-6 px-6 py-10 text-sm text-slate-600 dark:text-slate-300 lg:flex-row lg:items-center lg:justify-between lg:px-8">
-          <p>© {new Date().getFullYear()} Corevia Systems Pvt Ltd. All rights reserved.</p>
+          <div className="flex items-center gap-3">
+            <img src="/corevia-logo.svg" alt="Corevia Systems logo" className="h-7 w-auto" loading="lazy" />
+            <p>© {new Date().getFullYear()} Corevia Systems Pvt Ltd. All rights reserved.</p>
+          </div>
           <div className="flex items-center gap-5">
             <a href="#about" className="hover:text-indigo-500">About</a>
             <a href="#services" className="hover:text-indigo-500">Services</a>
