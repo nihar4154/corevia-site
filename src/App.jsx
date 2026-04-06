@@ -118,9 +118,9 @@ export default function App() {
   return (
     <div className="relative overflow-x-hidden">
       <header className="sticky top-0 z-40 border-b border-slate-200/70 bg-white/90 backdrop-blur dark:border-slate-800 dark:bg-slate-950/90">
-        <div className="mx-auto flex h-16 max-w-7xl items-center justify-between px-6 lg:px-8">
+        <div className="mx-auto flex h-20 max-w-7xl items-center justify-between px-6 lg:px-8">
           <a href="#" className="inline-flex items-center gap-3 text-lg font-semibold tracking-tight" aria-label="Corevia homepage">
-            <img src="/corevia-logo.svg" alt="Corevia logo" className="h-9 w-auto" loading="eager" />
+            <img src="/corevia-logo.svg" alt="Corevia logo" className="h-12 w-auto sm:h-14" loading="eager" />
             <span className="sr-only">Corevia Systems</span>
           </a>
 
