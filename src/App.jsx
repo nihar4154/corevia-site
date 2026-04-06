@@ -64,16 +64,17 @@ const caseStudies = [
   },
 ];
 
+const WHATSAPP_NUMBER = '919019830630';
+
 export default function App() {
-  const [isDark, setIsDark] = useState(false);
+  const [isDark, setIsDark] = useState(true);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   useEffect(() => {
     const savedTheme = localStorage.getItem('corevia-theme');
-    if (savedTheme === 'dark') {
-      setIsDark(true);
-      document.documentElement.classList.add('dark');
-    }
+    const shouldUseDark = savedTheme !== 'light';
+    setIsDark(shouldUseDark);
+    document.documentElement.classList.toggle('dark', shouldUseDark);
   }, []);
 
   const navItems = useMemo(
@@ -94,12 +95,33 @@ export default function App() {
     localStorage.setItem('corevia-theme', nextTheme ? 'dark' : 'light');
   };
 
+  const handleWhatsAppSubmit = (event) => {
+    event.preventDefault();
+
+    const formData = new FormData(event.currentTarget);
+    const name = formData.get('name')?.toString().trim() ?? '';
+    const email = formData.get('email')?.toString().trim() ?? '';
+    const message = formData.get('message')?.toString().trim() ?? '';
+
+    const text = [
+      'Hello Corevia, I would like to discuss a project.',
+      `Name: ${name}`,
+      `Email: ${email}`,
+      `Message: ${message}`,
+    ].join('\n');
+
+    const whatsappUrl = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(text)}`;
+    window.open(whatsappUrl, '_blank', 'noopener,noreferrer');
+    event.currentTarget.reset();
+  };
+
   return (
     <div className="relative overflow-x-hidden">
       <header className="sticky top-0 z-40 border-b border-slate-200/70 bg-white/90 backdrop-blur dark:border-slate-800 dark:bg-slate-950/90">
         <div className="mx-auto flex h-16 max-w-7xl items-center justify-between px-6 lg:px-8">
-          <a href="#" className="text-lg font-semibold tracking-tight">
-            Corevia<span className="text-indigo-500"> Systems</span>
+          <a href="#" className="inline-flex items-center gap-3 text-lg font-semibold tracking-tight" aria-label="Corevia homepage">
+            <img src="/corevia-logo.svg" alt="Corevia logo" className="h-9 w-auto" loading="eager" />
+            <span className="sr-only">Corevia Systems</span>
           </a>
 
           <nav className="hidden items-center gap-6 md:flex">
@@ -254,25 +276,40 @@ export default function App() {
               </p>
             </div>
 
-            <form className="rounded-2xl border border-slate-200 bg-white p-6 dark:border-slate-800 dark:bg-slate-900">
-              <label className="block text-sm font-medium">Name</label>
+            <form
+              className="rounded-2xl border border-slate-200 bg-white p-6 dark:border-slate-800 dark:bg-slate-900"
+              onSubmit={handleWhatsAppSubmit}
+            >
+              <label htmlFor="contact-name" className="block text-sm font-medium">
+                Name
+              </label>
               <input
+                id="contact-name"
+                name="name"
                 type="text"
                 required
                 className="mt-2 w-full rounded-xl border border-slate-300 bg-transparent px-4 py-2 outline-none ring-indigo-300 transition focus:ring dark:border-slate-700"
                 placeholder="Enter your name"
               />
 
-              <label className="mt-4 block text-sm font-medium">Email</label>
+              <label htmlFor="contact-email" className="mt-4 block text-sm font-medium">
+                Email
+              </label>
               <input
+                id="contact-email"
+                name="email"
                 type="email"
                 required
                 className="mt-2 w-full rounded-xl border border-slate-300 bg-transparent px-4 py-2 outline-none ring-indigo-300 transition focus:ring dark:border-slate-700"
                 placeholder="Enter your email"
               />
 
-              <label className="mt-4 block text-sm font-medium">Message</label>
+              <label htmlFor="contact-message" className="mt-4 block text-sm font-medium">
+                Message
+              </label>
               <textarea
+                id="contact-message"
+                name="message"
                 rows="4"
                 required
                 className="mt-2 w-full rounded-xl border border-slate-300 bg-transparent px-4 py-2 outline-none ring-indigo-300 transition focus:ring dark:border-slate-700"
@@ -312,7 +349,7 @@ export default function App() {
       </footer>
 
       <a
-        href="https://wa.me/919019830630"
+        href={`https://wa.me/${WHATSAPP_NUMBER}`}
         target="_blank"
         rel="noreferrer"
         aria-label="Chat on WhatsApp"
