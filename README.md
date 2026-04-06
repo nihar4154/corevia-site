@@ -12,8 +12,8 @@ A modern, premium static company website built with **React + Vite + Tailwind CS
 ## Features
 
 - Fully responsive landing page (mobile + desktop)
-- Hero, About, Services, Tech Stack, Projects, Testimonials, Contact, Footer sections
-- SEO-ready metadata + dynamic meta updates in app
+- Hero, About, Services, Tech Stack, Projects, Testimonials, Contact, and Footer sections
+- SEO-ready metadata and dynamic meta updates in the app
 - `robots.txt` and `sitemap.xml`
 - GA4 integration + event tracking hooks
 - Dark mode toggle with localStorage persistence
