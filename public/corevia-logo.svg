@@ -1,30 +1,31 @@
-<svg width="1200" height="320" viewBox="0 0 1200 320" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc" preserveAspectRatio="xMidYMid meet">
+<svg width="820" height="220" viewBox="-20 -20 860 260" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc" preserveAspectRatio="xMidYMid meet">
   <title id="title">Corevia Systems logo</title>
-  <desc id="desc">Corevia gradient infinity emblem with bold COREVIA wordmark.</desc>
+  <desc id="desc">A gradient infinity mark followed by the Corevia wordmark.</desc>
   <defs>
-    <linearGradient id="coreviaGradient" x1="30" y1="20" x2="470" y2="280" gradientUnits="userSpaceOnUse">
-      <stop stop-color="#FF9A16"/>
-      <stop offset="0.5" stop-color="#FF3A44"/>
+    <linearGradient id="coreviaGradient" x1="50" y1="20" x2="370" y2="180" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FF8A00"/>
+      <stop offset="0.45" stop-color="#FF3D54"/>
+      <stop offset="1" stop-color="#E3005A"/>
+    </linearGradient>
+    <linearGradient id="wordGradient" x1="390" y1="50" x2="790" y2="160" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FF6B2C"/>
       <stop offset="1" stop-color="#E40053"/>
     </linearGradient>
-    <linearGradient id="wordGradient" x1="500" y1="80" x2="1140" y2="250" gradientUnits="userSpaceOnUse">
-      <stop stop-color="#FF7A1F"/>
-      <stop offset="1" stop-color="#E40053"/>
-    </linearGradient>
+    <filter id="softShadow" x="-40" y="-40" width="900" height="300" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feDropShadow dx="0" dy="4" stdDeviation="4" flood-color="#B91C1C" flood-opacity="0.28"/>
+    </filter>
   </defs>
 
-  <g>
-    <path d="M62 160C62 103 108 58 166 58C206 58 241 80 259 113" stroke="url(#coreviaGradient)" stroke-width="30" stroke-linecap="round"/>
-    <path d="M446 160C446 103 400 58 342 58C302 58 267 80 249 113" stroke="url(#coreviaGradient)" stroke-width="30" stroke-linecap="round"/>
-    <path d="M62 160C62 216 108 262 166 262C220 262 267 219 322 160C377 101 424 58 478 58" stroke="url(#coreviaGradient)" stroke-width="34" stroke-linecap="round"/>
-    <path d="M446 160C446 216 400 262 342 262C288 262 241 219 186 160C131 101 84 58 30 58" stroke="url(#coreviaGradient)" stroke-width="34" stroke-linecap="round"/>
-    <path d="M126 166C160 130 191 130 226 166C261 201 292 201 326 166" stroke="#F8FAFC" stroke-width="12" stroke-linecap="round"/>
-    <path d="M182 110C217 74 249 74 284 110C319 146 350 146 384 110" stroke="#F8FAFC" stroke-width="12" stroke-linecap="round"/>
-    <circle cx="384" cy="110" r="9" fill="#F8FAFC"/>
-    <circle cx="326" cy="166" r="9" fill="#F8FAFC"/>
+  <g filter="url(#softShadow)">
+    <path d="M64 112C64 72 96 40 136 40C164 40 188 56 200 79" stroke="url(#coreviaGradient)" stroke-width="20" stroke-linecap="round"/>
+    <path d="M356 112C356 72 324 40 284 40C256 40 232 56 220 79" stroke="url(#coreviaGradient)" stroke-width="20" stroke-linecap="round"/>
+    <path d="M64 112C64 152 96 184 136 184C173 184 206 154 244 115C282 76 315 46 352 46" stroke="url(#coreviaGradient)" stroke-width="22" stroke-linecap="round"/>
+    <path d="M356 112C356 152 324 184 284 184C247 184 214 154 176 115C138 76 105 46 68 46" stroke="url(#coreviaGradient)" stroke-width="22" stroke-linecap="round"/>
+    <circle cx="66" cy="46" r="8" fill="#fff"/>
+    <circle cx="352" cy="46" r="8" fill="#fff"/>
   </g>
 
-  <text x="520" y="218" fill="url(#wordGradient)" font-family="Inter, Poppins, Arial, sans-serif" font-size="140" font-weight="900" letter-spacing="2.5" paint-order="stroke" stroke="#D71B4D" stroke-width="3">
+  <text x="408" y="150" fill="url(#wordGradient)" font-family="Inter, Poppins, Arial, sans-serif" font-size="98" font-weight="800" letter-spacing="1.8">
     COREVIA
   </text>
 </svg>
