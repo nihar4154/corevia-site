@@ -118,10 +118,11 @@ export default function App() {
   return (
     <div className="relative overflow-x-hidden">
       <header className="sticky top-0 z-40 border-b border-slate-200/70 bg-white/90 backdrop-blur dark:border-slate-800 dark:bg-slate-950/90">
-        <div className="mx-auto flex h-16 max-w-7xl items-center justify-between px-6 lg:px-8">
-          <a href="#" className="inline-flex items-center gap-3 text-lg font-semibold tracking-tight" aria-label="Corevia homepage">
-            <img src="/corevia-logo.svg" alt="Corevia logo" className="h-9 w-auto" loading="eager" />
-            <span className="sr-only">Corevia Systems</span>
+        <div className="mx-auto flex h-24 max-w-7xl items-center justify-between px-6 lg:px-8">
+          <a href="#" className="inline-flex items-center text-lg font-semibold tracking-tight" aria-label="Corevia homepage">
+            <span className="bg-gradient-to-r from-orange-500 via-rose-500 to-pink-600 bg-clip-text text-base font-bold text-transparent sm:text-lg">
+              Corevia Systems Pvt Ltd
+            </span>
           </a>
 
           <nav className="hidden items-center gap-6 md:flex">
