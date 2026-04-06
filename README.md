@@ -12,25 +12,11 @@ A modern, premium static company website built with **React + Vite + Tailwind CS
 ## Features
 
 - Fully responsive landing page (mobile + desktop)
-- Hero, About, Services, Tech Stack, Projects, Testimonials, Contact, Footer sections
-- SEO-ready metadata + dynamic meta updates in app
-- `robots.txt` and `sitemap.xml`
-- GA4 integration + event tracking hooks
+- Hero, About, Services, Tech Stack, Projects, Contact, Footer sections
+- SEO-ready metadata in `index.html`
 - Dark mode toggle with localStorage persistence
-- Functional contact form with Formspree support and mailto fallback
 - Floating WhatsApp CTA
-
-## Environment Variables
-
-Create a `.env` file in the project root:
-
-```bash
-VITE_GA_MEASUREMENT_ID=G-XXXXXXXXXX
-VITE_FORMSPREE_ENDPOINT=https://formspree.io/f/your-form-id
-```
-
-- `VITE_GA_MEASUREMENT_ID` is required for production analytics.
-- `VITE_FORMSPREE_ENDPOINT` is optional; if omitted, the form uses mailto fallback.
+- Clean, fast-loading UI optimized for static deployment
 
 ## Run locally
 
@@ -55,7 +41,6 @@ npm run preview
 3. Framework preset: **Vite**.
 4. Build command: `npm run build`
 5. Output directory: `dist`
-6. Add env vars from above in Vercel Project Settings → Environment Variables.
-7. Click deploy.
+6. Click deploy.
 
 Domain can then be connected to `coreviasystems.io` in Vercel project settings.
